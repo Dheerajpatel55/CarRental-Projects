@@ -1,0 +1,201 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 0 20px;
+  height: 63px;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  padding: 14px;
+}
+
+.navbar li a {
+  font-size: large;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 18px 14px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+  text-decoration: none;
+}
+
+/* Filter section styling */
+.filter-section {
+  position: fixed;
+  margin-top: 70px;
+  border-radius: 10px;
+  right: 10px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 900;
+  width:220px;
+}
+
+.filter-group {
+  margin-bottom: 10px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 5px;
+}
+
+.filter-section button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin-top:30px ; /* Adjust margin to account for the fixed navbar height */
+  padding: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 12px;
+}
+
+.featured-car-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.car-item {
+  display: none;
+}
+
+.car-item.show {
+  display: block;
+}
+
+.featured-car-card {
+  background: #ecfaff;
+  border: 1px solid #e4d9d9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(20, 20, 20, 0.1);
+}
+
+.card-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  color: black;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.year {
+  font-size: 1em;
+  color: #666;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.card-list-item {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+
+.card-list-item ion-icon {
+  margin-right: 10px;
+}
+
+.card-item-text {
+  font-size: 1em;
+}
+
+.card-price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.featured-car-card:hover .card-banner img {
+  transform: scale(1.25);
+}

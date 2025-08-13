@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental</title>
+  <link rel="stylesheet" href="css/cars.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html" class="logo">Car Hire</a>
+    <ul>
+      <li><a href="cars.html">Cars</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="login.html">Signin</a></li>
+    </ul>
+  </div>
+  <br>
+  <div class="filter-section">
+    <h3>Filter Cars</h3>
+    <form id="filter-form">
+      <div class="filter-group">
+        <label for="brand">Brand</label>
+        <select id="brand" name="brand">
+          <option value="all">All</option>
+          <option value="toyota">Toyota</option>
+          <option value="audi">Audi</option>
+          <option value="suzuki">Suzuki</option>
+          <option value="bmw">BMW</option>
+          <option value="mercedes">Mercedes</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="price">Price</label>
+        <select id="price" name="price">
+          <option value="all">All</option>
+          <option value="low">Below ₹15000</option>
+          <option value="mid">₹15000 - ₹20000</option>
+          <option value="high">Above ₹20000</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="ac">AC</label>
+        <select id="ac" name="ac">
+          <option value="all">All</option>
+          <option value="ac">AC</option>
+          <option value="non-ac">Non-AC</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="seating">Seating Capacity</label>
+        <select id="seating" name="seating">
+          <option value="all">All</option>
+          <option value="4">4 People</option>
+          <option value="6">6 People</option>
+          <option value="8">8 People</option>
+        </select>
+      </div>
+      <button type="button" onclick="applyFilters()">Apply Filters</button>
+    </form>
+  </div>
+
+  <section class="section featured-car">
+    <div class="container">
+      <ul class="featured-car-list">
+        <li class="car-item audi show" data-brand="audi" data-price="5000" data-ac="ac" data-seating="4">
+          <div class="featured-car-card">
+            <figure class="card-banner">
+              <a href="details.html" class="car-link" data-car='{"id": "audi1","title": "Audi Car 1", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                <img src="css/images/car-1.jpg" alt="Audi Car 1">
+              </a></figure>
+            <div class="card-content">
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title"><a href="#">Audi Car 1</a></h3>
+                <data class="year" value="2019">2019</data>
+              </div>
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <span class="card-item-text">4 People</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+                  <span class="card-item-text">Gasoline</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+                  <span class="card-item-text">8.2km / 1-litre</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+                  <span class="card-item-text">Automatic</span>
+                </li>
+              </ul>
+              <div class="card-price-wrapper">
+                <p class="card-price"><strong>₹5000</strong> / day</p>
+                <button class="btn">Rent now</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="car-item audi show" data-brand="audi" data-price="5500" data-ac="non-ac" data-seating="4">
+          <div class="featured-car-card">
+            <figure class="card-banner">
+              <a href="details.html" class="car-link" data-car='{"id": "audi2","title": "Audi Car 2", "year": "2020", "price": "₹5500/day", "details": ["4 people","Gasoline", "Automatic","Non-AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                <img src="css/images/car-2.jpg" alt="Audi Car 1">
+              </a>
+            </figure>
+            <div class="card-content">
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title"><a href="#">Audi Car 2</a></h3>
+                <data class="year" value="2020">2020</data>
+              </div>
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <span class="card-item-text">4 People</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+                  <span class="card-item-text">Gasoline</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+                  <span class="card-item-text">7.7km / 1-litre</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+                  <span class="card-item-text">Automatic</span>
+                </li>
+              </ul>
+              <div class="card-price-wrapper">
+                <p class="card-price"><strong>₹5500</strong> / day</p>
+                <button class="btn">Rent now</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="car-item audi show" data-brand="audi" data-price="13000" data-ac="non-ac" data-seating="4">
+          <div class="featured-car-card">
+            <figure class="card-banner">
+              <a href="details.html" class="car-link" data-car='{"id": "audi3","title": "Audi Car 3", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                <img src="css/images/car-1.jpg" alt="Audi Car 1">
+              </a>
+            </figure>
+            <div class="card-content">
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title"><a href="#">Audi Car 3</a></h3>
+                <data class="year" value="2019">2019</data>
+              </div>
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <span class="card-item-text">4 People</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+                  <span class="card-item-text">Gasoline</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+                  <span class="card-item-text">8.2km / 1-litre</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+                  <span class="card-item-text">Automatic</span>
+                </li>
+              </ul>
+              <div class="card-price-wrapper">
+                <p class="card-price"><strong>₹13000</strong> / month</p>
+                <button class="btn">Rent now</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="car-item audi show" data-brand="audi" data-price="23000" data-ac="ac" data-seating="4">
+          <div class="featured-car-card">
+            <figure class="card-banner">
+              <a href="details.html" class="car-link" data-car='{"id": "audi4","title": "Audi Car 4", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                <img src="css/images/car-1.jpg" alt="Audi Car 1">
+              </a>
+            </figure>
+            <div class="card-content">
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title"><a href="#">Audi Car 4</a></h3>
+                <data class="year" value="2019">2019</data>
+              </div>
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <span class="card-item-text">4 People</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+                  <span class="card-item-text">Gasoline</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+                  <span class="card-item-text">8.2km / 1-litre</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+                  <span class="card-item-text">Automatic</span>
+                </li>
+              </ul>
+              <div class="card-price-wrapper">
+                <p class="card-price"><strong>₹23000</strong> / month</p>
+                <button class="btn">Rent now</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="car-item audi show" data-brand="audi" data-price="13000" data-ac="ac" data-seating="4">
+          <div class="featured-car-card">
+            <figure class="card-banner">
+              <a href="details.html" class="car-link" data-car='{"id": "audi5","title": "Audi Car 5", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                <img src="css/images/car-1.jpg" alt="Audi Car 1">
+              </a>
+            </figure>
+            <div class="card-content">
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title"><a href="#">Audi Car 5</a></h3>
+                <data class="year" value="2019">2019</data>
+              </div>
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <span class="card-item-text">4 People</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+                  <span class="card-item-text">Gasoline</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+                  <span class="card-item-text">8.2km / 1-litre</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+                  <span class="card-item-text">Automatic</span>
+                </li>
+              </ul>
+              <div class="card-price-wrapper">
+                <p class="card-price"><strong>₹13000</strong> / month</p>
+                <button class="btn">Rent now</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="car-item audi show" data-brand="audi" data-price="13000" data-ac="ac" data-seating="4">
+          <div class="featured-car-card">
+            <figure class="card-banner">
+              <a href="details.html" class="car-link" data-car='{"id": "audi6","title": "Audi Car 6", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                <img src="css/images/car-1.jpg" alt="Audi Car 1">
+              </a>
+            </figure>
+            <div class="card-content">
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title"><a href="#">Audi Car 6</a></h3>
+                <data class="year" value="2019">2019</data>
+              </div>
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <span class="card-item-text">4 People</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+                  <span class="card-item-text">Gasoline</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+                  <span class="card-item-text">8.2km / 1-litre</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+                  <span class="card-item-text">Automatic</span>
+                </li>
+              </ul>
+              <div class="card-price-wrapper">
+                <p class="card-price"><strong>₹13000</strong> / month</p>
+                <button class="btn">Rent now</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="car-item toyota" data-brand="toyota" data-price="13000" data-ac="non-ac" data-seating="4">
+          <div class="featured-car-card">
+            <figure class="card-banner">
+              <a href="details.html" class="car-link" data-car='{"id": "toyota1","title": "toyota Car 1", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                <img src="css/images/car-1.jpg" alt="Toyota Car 1">
+              </a>
+            </figure>
+            <div class="card-content">
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title"><a href="#">Toyota Car 1</a></h3>
+                <data class="year" value="2018">2018</data>
+              </div>
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <span class="card-item-text">5 People</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+                  <span class="card-item-text">Hybrid</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+                  <span class="card-item-text">15km / 1-litre</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+                  <span class="card-item-text">Automatic</span>
+                </li>
+              </ul>
+              <div class="card-price-wrapper">
+                <p class="card-price"><strong>₹18000</strong> / month</p>
+                <button class="btn">Rent now</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="car-item toyota" data-brand="toyota" data-price="13000" data-ac="ac" data-seating="4">
+          <div class="featured-car-card">
+            <figure class="card-banner">
+              <a href="details.html" class="car-link" data-car='{"id": "toyota2","title": "toyota Car 2", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                <img src="css/images/car-1.jpg" alt="Toyota Car 2">
+              </a>
+            </figure>
+            <div class="card-content">
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title"><a href="#">Toyota Car 2</a></h3>
+                <data class="year" value="2018">2018</data>
+              </div>
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <span class="card-item-text">5 People</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+                  <span class="card-item-text">Hybrid</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+                  <span class="card-item-text">15km / 1-litre</span>
+                </li>
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+                  <span class="card-item-text">Automatic</span>
+                </li>
+              </ul>
+              <div class="card-price-wrapper">
+                <p class="card-price"><strong>₹18000</strong> / month</p>
+                <button class="btn">Rent now</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="car-item toyota" data-brand="toyota" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "toyota3","title": "toyota Car 3", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Toyota Car 3">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Toyota Car 3</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">8 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item toyota" data-brand="toyota" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "toyota4","title": "toyota Car 4", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Toyota Car 4">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Toyota Car 4</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item toyota" data-brand="toyota" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "toyota5","title": "toyota Car 5", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Toyota Car 5">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Toyota Car 5</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item toyota" data-brand="toyota" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "toyota6","title": "toyota Car 6", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Toyota Car 6">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Toyota Car 6</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item suzuki" data-brand="suzuki" data-price="13000" data-ac="non-ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "suzuki1","title": "Suzuki Car 1", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Suzuki Car 1">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Suzuki Car 1</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item suzuki" data-brand="suzuki" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "suzuki2","title": "Suzuki Car 2", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Suzuki Car 2">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Suzuki Car 2</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item suzuki" data-brand="suzuki" data-price="13000" data-ac="ac" data-seating="6">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "suzuki3","title": "Suzuki Car 3", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Suzuki Car 3">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Suzuki Car 3</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">6 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item suzuki" data-brand="suzuki" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "suzuki4","title": "Suzuki Car 4", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Suzuki Car 4">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Suzuki Car 4</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item suzuki" data-brand="suzuki" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "suzuki5","title": "Suzuki Car 5", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Suzuki Car 5">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Suzuki Car 5</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item suzuki" data-brand="suzuki" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "suzuki6","title": "Suzuki Car 6", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Suzuki Car 6">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Suzuki Car 6</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item bmw" data-brand="bmw" data-price="23000" data-ac="non-ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "bmw1","title": "BMW Car 1", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="BMW Car 1">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">BMW Car 1</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item bmw" data-brand="bmw" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "bmw2","title": "BMW Car 2", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="BMW Car 2">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">BMW Car 2</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item bmw" data-brand="bmw" data-price="13000" data-ac="ac" data-seating="6">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "bmw3","title": "BMW Car 3", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="BMW Car 3">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">BMW Car 3</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">6 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item bmw" data-brand="bmw" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "bmw4","title": "BMW Car 4", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="BMW Car 4">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">BMW Car 4</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item bmw" data-brand="bmw" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "bmw5","title": "BMW Car 5", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="BMW Car 5">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">BMW Car 5</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item bmw" data-brand="bmw" data-price="13000" data-ac="ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "bmw6","title": "BMW Car 6", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="BMW Car 6">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">BMW Car 6</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item mercedes" data-brand="mercedes" data-price="13000" data-ac="non-ac" data-seating="4">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "mercedes1","title": "Mercedes Car 1", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Mercedes Car 1">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Marcedes Car 1</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item mercedes" data-brand="mercedes" data-price="13000" data-ac="ac" data-seating="6">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "mercedes2","title": "Mercedes Car 2", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Mercedes Car 2">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Marcedes Car 2</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">6 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item mercedes" data-brand="mercedes" data-price="13000" data-ac="ac" data-seating="6">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "mercedes3","title": "Mercedes Car 3", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Mercedes Car 3">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Marcedes Car 3</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item mercedes" data-brand="mercedes" data-price="13000" data-ac="ac" data-seating="8">
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "mercedes4","title": "Mercedes Car 4", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Mercedes Car 4">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Marcedes Car 4</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">8 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item mercedes" data-brand="mercedes" data-price="13000" data-ac="ac" data-seating="4"> 
+            <div class="featured-car-card">
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "mercedes5","title": "Mercedes Car 5", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-2.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Mercedes Car 5">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Marcedes Car 5</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">4 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="car-item mercedes" data-brand="mercedes" data-price="13000" data-ac="ac" data-seating="6">
+            <div class="featured-car-card" >
+              <figure class="card-banner">
+                <a href="details.html" class="car-link" data-car='{"id": "mercedes6","title": "Mercedes Car 6", "year": "2019", "price": "₹5000/day", "details": ["4 people","Gasoline", "Automatic","AC"], "images": ["css/images/car-2.jpg", "css/images/car-1.jpg", "css/images/car-6.jpg"]}'>
+                  <img src="css/images/car-1.jpg" alt="Mercedes Car 6">
+                </a>
+              </figure>
+              <div class="card-content">
+                <div class="card-title-wrapper">
+                  <h3 class="h3 card-title"><a href="#">Marcedes Car 6</a></h3>
+                  <data class="year" value="2018">2018</data>
+                </div>
+                <ul class="card-list">
+                  <li class="card-list-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span class="card-item-text">5 People</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span class="card-item-text">Hybrid</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <span class="card-item-text">15km / 1-litre</span>
+                  </li>
+                  <li class="card-list-item">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                    <span class="card-item-text">Automatic</span>
+                  </li>
+                </ul>
+                <div class="card-price-wrapper">
+                  <p class="card-price"><strong>₹18000</strong> / month</p>
+                  <button class="btn">Rent now</button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="js/cars.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,262 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Cars Rental</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/8954b3c36f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/IG.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html" class="logo">Car Hire</a>
+    <ul>
+      <li><a href="cars.html">Cars</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="FAQs.html">FAQs</a></li>
+      <li><a href="login.html">Signin</a></li>
+    </ul>
+  </div>
+  
+  
+<h1 style="font-family: Arial, Helvetica, sans-serif;border-bottom: 1px solid#1c1c1c;padding-bottom: 5px;
+ margin-top: 18px;">
+   <marquee> Drive with Confidence, Travel with Comfort.</marquee></h1>
+<!--calendar start----------------------------------------------------------------------------------------->
+<div class="hero">
+    <div class="booking-container">
+        <div class="booking-options">
+            <button class="active" onclick="showOneWay(event)">One Way</button>
+            <button onclick="showRoundTrip(event)">Round Trip</button>
+            <button onclick="showLocal(event)">Local</button>
+            <button onclick="showAirport(event)">Airport</button>
+        </div>
+        <div class="booking-form">
+            <div class="form-group" id="airport-type-group" style="display: none;">
+                <label for="airport-type">Trip</label>
+                <select id="airport-type">
+                    <option value="drop">Drop to Airport</option>
+                    <option value="pickup">Pickup from Airport</option>
+                </select>
+            </div>
+            <div class="form-group" id="from-group">
+                <label for="from" style="font-size: 25px;">From</label><br>
+                <input type="text" id="from" placeholder="Start typing city - e.g. Bangalore">
+            </div>
+            <div class="form-group" id="to-group">
+                <label for="to" style="font-size: 25px;">To</label><br>
+                <input type="text" id="to" placeholder="Start typing city - e.g. Mysore">
+            </div>
+            <div class="form-group" id="city-group" style="display: none;">
+                <label for="city" style="font-size: 25px;">City</label><br>
+                <input type="text" id="city" placeholder="Start typing city name - e.g. Bangalore">
+            </div>
+            <div class="form-group" id="pickup-date-group">
+                <label for="pickup-date" style="font-size: 25px;">Pick Up</label>
+                <input type="date" id="pickup-date" value="2024-06-11">
+            </div>
+            <div class="form-group" id="return-date-group" style="display: none;">
+                <label for="return-date" style="font-size: 25px;">Return</label><br>
+                <input type="date" id="return-date" value="2024-06-11">
+            </div>
+            <div class="form-group" id="pickup-time-group">
+                <label for="pickup-time" style="font-size: 25px;">Pick Up At</label>
+                <input type="time" id="pickup-time" value="07:00">
+            </div>
+        </div>
+        <div class="explore-button-container">
+            <button href="" class="explore-button" onclick="handleExploreClick()" >Explore Cabs</button>
+        </div>
+    </div>
+</div>
+
+    <!------calendar over-----------------------handleExploreClick()-------------------------------------------------------------------->
+    <div class="supporting">
+    <h1>Find the Best Car Hire Deals in your Location</h1>
+  <p>These are the most popular types of rental cars available for pickup at a location near you within the next 30 days.</p>
+</div>
+<!--blockssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss-->
+<div class="container" >
+  <h2>Why book with us?</h2>
+  <div class="features">
+      <div class="feature">
+        <i class="fa-solid fa-gift" style="font-size: 40px;padding-bottom: 5%;"></i>
+          <h3>Special offers</h3>
+          <p>As a market leader (see SimilarWeb), we get special offers like contactless pick-ups, great prices, and free upgrades.</p>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-trophy" style="font-size: 40px;padding-bottom: 5%;"></i>
+          <h3>Award-winning</h3>
+          <p>World's Leading Car Rental Booking Website in the World Travel Tech Awards (3 years in a row).</p>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-heart" style="font-size: 40px;padding-bottom: 5%;"></i>
+          <h3>Highly-rated</h3>
+          <p>A combined rating of 4.5 with 150k+ total reviews on platforms like Trustpilot, Google, and Review Center.</p>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-users" style="font-size: 40px;padding-bottom: 5%;"></i>
+          <h3>4M users</h3>
+          <p>Have already booked on one of the fastest-growing car rental booking websites.</p>
+      </div>
+  </div>
+</div>
+<!--=========================================================================================-->
+
+<!---                 ---------------------------------------------------------------------------------->
+<div class="roadmap">
+</div>
+<!-- ============================================================= -->
+ 
+ <div class="bodies">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('css/images/car-1.jpg')"></div>
+      <div class="swiper-slide" style="background-image: url('css/images/car-2.jpg')"></div>
+      <div class="swiper-slide" style="background-image: url('css/images/car-3.jpg')"></div>
+      <div class="swiper-slide" style="background-image: url('css/images/car-5.jpg')"></div>
+      <div class="swiper-slide" style="background-image: url('css/images/car-6.jpg')"></div>
+    </div>
+  </div>
+</div>
+
+
+<!--==============================================-->
+<div class="scroller" data-animated="true">
+  <ul class="img-list scroller__inner">
+      <li>
+          <img src="css/images/toyota-logo.png" alt="toyota-logo">
+      </li>
+      <li>
+          <img src="css/images/mahindra-logo.png" alt="mahindra-logo">
+      </li>
+      <li>
+          <img src="css/images/Tata-logo.png" alt="Tata-logo">
+      </li>
+      <li>
+          <img src="css/images/bharatbenz logo.png" alt="bharatbenz-logo">
+      </li>
+      <li>
+          <img src="css/images/premier logo.png" alt="premier-logo">
+      </li>
+      <li>
+          <img src="css/images/force logo.png" alt="force-logo">
+      </li>
+      <li>
+          <img src="css/images/hindustan logo.png" alt="hindustan-logo">
+      </li>
+      <!-- add more images
+  </ul> -->
+</div>
+
+
+<div class="footer">
+    <p>&copy; 2024 Company Name. All rights reserved.</p>
+</div>
+<script>
+function showOneWay(event) {
+  hideAllGroups();
+  document.getElementById('from-group').style.display = 'block';
+  document.getElementById('to-group').style.display = 'block';
+  document.getElementById('pickup-date-group').style.display = 'block';
+  document.getElementById('pickup-time-group').style.display = 'block';
+  setActiveButton(event.target);
+}
+
+function showRoundTrip(event) {
+  hideAllGroups();
+  document.getElementById('from-group').style.display = 'block';
+  document.getElementById('to-group').style.display = 'block';
+  document.getElementById('pickup-date-group').style.display = 'block';
+  document.getElementById('return-date-group').style.display = 'block';
+  document.getElementById('pickup-time-group').style.display = 'block';
+  setActiveButton(event.target);
+}
+
+function showLocal(event) {
+  hideAllGroups();
+  document.getElementById('city-group').style.display = 'block';
+  document.getElementById('pickup-date-group').style.display = 'block';
+  document.getElementById('pickup-time-group').style.display = 'block';
+  setActiveButton(event.target);
+}
+
+function showAirport(event) {
+  hideAllGroups();
+  document.getElementById('airport-type-group').style.display = 'block';
+  document.getElementById('pickup-date-group').style.display = 'block';
+  document.getElementById('pickup-time-group').style.display = 'block';
+  document.getElementById('city-group').style.display = 'block';
+  setActiveButton(event.target);
+}
+
+function hideAllGroups() {
+  document.querySelectorAll('.form-group').forEach(group => {
+      group.style.display = 'none';
+  });
+}
+
+function setActiveButton(button) {
+  document.querySelectorAll('.booking-options button').forEach(btn => {
+      btn.classList.remove('active');
+  });
+  button.classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const oneWayButton = document.querySelector('.booking-options button');
+  oneWayButton.click(); // Programmatically trigger a click event
+});
+
+function handleExploreClick() {
+  const bookingType = document.querySelector('.booking-options .active').innerText;
+
+  let pickup, dropoff, pickupTime, dropoffTime;
+
+  if (bookingType === 'One Way' || bookingType === 'Round Trip') {
+    pickup = document.getElementById('from').value;
+    dropoff = document.getElementById('to').value;
+  } else {
+    pickup = document.getElementById('city').value;
+    dropoff = document.getElementById('city').value;
+  }
+
+  pickupTime = document.getElementById('pickup-time').value;
+
+  if (bookingType === 'Round Trip') {
+    dropoffTime = document.getElementById('return-date').value;
+  }
+
+  const isLoggedIn = checkUserLoginStatus(); // Implement this function based on your authentication system
+
+  const bookingDetails = {
+    bookingType,
+    pickup,
+    dropoff,
+    pickupDate: document.getElementById('pickup-date').value,
+    pickupTime,
+    returnDate: dropoffTime || null
+  };
+
+  if (isLoggedIn) {
+    localStorage.setItem('bookingDetails', JSON.stringify(bookingDetails));
+    window.location.href = 'cars.html';
+  } else {
+    localStorage.setItem('bookingDetails', JSON.stringify(bookingDetails));
+    window.location.href = 'login.html';
+  }
+}
+
+function checkUserLoginStatus() {
+  // Placeholder implementation, update with actual login status check
+  return false; // or true if user is logged in
+}
+  
+</script>
+
+<!------------------------------------------------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/IG.js"></script>
+</body>
+</html>
